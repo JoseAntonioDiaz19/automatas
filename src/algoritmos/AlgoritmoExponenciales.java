@@ -12,14 +12,12 @@ import javax.swing.JOptionPane;
  */
 public class AlgoritmoExponenciales {
     
-    char Entrada=' ';
-    char Estado=' ';
-    char S=' ';
-
-    Tabla_Numeros_Exponenciales tablaNumerosExponenciales = new Tabla_Numeros_Exponenciales();
-
+    private char Entrada;
+    private char Estado;
+    private char S;
+    private Tabla_Numeros_Exponenciales tablaNumerosExponenciales;
     private char[] arregloCadena_a_Char;
-    int i=0;
+    private int i = 0;
     
     /**
      * @return El arregloCadena_a_Char
@@ -39,12 +37,13 @@ public class AlgoritmoExponenciales {
             setArregloCadena_a_Char(Cadena.toCharArray());
     }
 
-    public char Leer_Simbolo(int i){
+    private char Leer_Simbolo(int i){
         return getArregloCadena_a_Char()[i];
     }
 
-    public boolean Proceso()
-    {
+    public boolean Proceso(){
+        
+        tablaNumerosExponenciales = new Tabla_Numeros_Exponenciales();
         i = 0;
         Estado = '0';
 
@@ -69,7 +68,7 @@ public class AlgoritmoExponenciales {
                         Entrada = '.';
                         break;
                     case 'e':
-                        Entrada='e';
+                        Entrada = 'e';
                         break;
 
                     default:
@@ -78,13 +77,13 @@ public class AlgoritmoExponenciales {
                         i=getArregloCadena_a_Char().length;
                 }
 
-                System.out.printf("%5s %5s %5s\n", Estado,S,Entrada);  
+                System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
                 Estado=tablaNumerosExponenciales.F(Estado, Entrada);
                 i++;
            }else{
 
                Entrada='F';
-               System.out.printf("%5s %5s %5s\n", Estado,S,Entrada);  
+               System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
                Estado=tablaNumerosExponenciales.F(Estado, Entrada);
                i++;
            }
@@ -105,8 +104,8 @@ public class AlgoritmoExponenciales {
 
     public char NumeroSimbolo(char Simbolo)
     {
-        switch(Simbolo)
-        {
+        switch(Simbolo){
+            
             case '0':
                 return 'd';
             case '1':
@@ -131,10 +130,4 @@ public class AlgoritmoExponenciales {
                 return Simbolo; 
         }
     }
-
-    public static void main(String[] args) {
-      AlgoritmoExponenciales objeto= new AlgoritmoExponenciales();
-      objeto.ingresarCadena("13j.4e-1");
-      System.out.println(objeto.Proceso());
-    } 
 }
