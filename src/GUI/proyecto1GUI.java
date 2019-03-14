@@ -170,7 +170,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
         labelTitulo.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         labelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         labelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelTitulo.setText("Lenguajes y automatas 1");
+        labelTitulo.setText("Proyecto 1");
         labelTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panelTitulo.add(labelTitulo);
 
