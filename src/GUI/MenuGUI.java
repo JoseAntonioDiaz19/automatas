@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package GUI;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -20,6 +22,13 @@ public class MenuGUI extends javax.swing.JFrame {
     
     public MenuGUI() {
         super("Proyectos");
+        
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        setSize(width/2+180, height/2+100);		
+        setLocationRelativeTo(null);
+        
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
