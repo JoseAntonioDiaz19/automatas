@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Dizan
  */
 public class proyecto1GUI extends javax.swing.JFrame {
- 
+    
       public DefaultTableModel modeloTablaPruebas;
     /**
      * Creates new form proyecto1
@@ -23,22 +23,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
         personalizarComponentes();
         modeloTablaPruebas = (DefaultTableModel) tablaPruebas.getModel() ;
         setSize(900, 600);
-        
-//        addWindowListener(new java.awt.event.WindowAdapter() {
-//            @Override
-//            public void windowClosing(java.awt.event.WindowEvent evt) {
-//                close();
-//            }
-//        });
     }
-    
-//    private void close(){
-//        if (JOptionPane.showConfirmDialog(rootPane, "¿Desea realmente salir del sistema?",
-//                "Salir del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
-//       
-//        //menuGui.setVisible(true);
-//    } 
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -98,7 +83,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
         botonTablaPunto = new javax.swing.JButton();
         botonTablaExponente = new javax.swing.JButton();
         botonTablaFin = new javax.swing.JButton();
-        tablaQ0 = new javax.swing.JButton();
+        botonTablaQ0 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
@@ -198,7 +183,6 @@ public class proyecto1GUI extends javax.swing.JFrame {
 
         fieldEntradaSimbolos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         fieldEntradaSimbolos.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        fieldEntradaSimbolos.setCaretPosition(0);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -484,11 +468,11 @@ public class proyecto1GUI extends javax.swing.JFrame {
         botonTablaFin.setText("Fdc");
         panelTablaTransicion.add(botonTablaFin);
 
-        tablaQ0.setBackground(new java.awt.Color(0, 32, 96));
-        tablaQ0.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tablaQ0.setForeground(new java.awt.Color(255, 255, 255));
-        tablaQ0.setText("q0");
-        panelTablaTransicion.add(tablaQ0);
+        botonTablaQ0.setBackground(new java.awt.Color(0, 32, 96));
+        botonTablaQ0.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        botonTablaQ0.setForeground(new java.awt.Color(255, 255, 255));
+        botonTablaQ0.setText("q0");
+        panelTablaTransicion.add(botonTablaQ0);
 
         jButton12.setBackground(new java.awt.Color(0, 32, 96));
         jButton12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -980,6 +964,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
     public javax.swing.JButton botonTablaMas;
     public javax.swing.JButton botonTablaMenos;
     public javax.swing.JButton botonTablaPunto;
+    public javax.swing.JButton botonTablaQ0;
     public javax.swing.JButton botonVacio;
     public javax.swing.JTextField fieldEntradaSimbolos;
     public javax.swing.JButton jButton12;
@@ -1046,8 +1031,6 @@ public class proyecto1GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelTitulo;
     private javax.swing.JScrollPane scrollTablaPruebas;
     public javax.swing.JTable tablaPruebas;
-    public javax.swing.JButton tablaQ0;
     // End of variables declaration//GEN-END:variables
- 
-    
+  
 }
