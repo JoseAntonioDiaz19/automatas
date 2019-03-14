@@ -11,7 +11,8 @@ package algoritmos;
 public class Tabla_Numeros_Exponenciales 
 {
    char arreglo[][]=
-   {    {' ' ,'d','+','-','.','e','F'  },
+   {    
+        {' ' ,'d','+','-','.','e','F'  },
         {'0' ,'2','1','1','E','E','E'  },
         {'1' ,'2','E','E','E','E','E'  },
         {'2' ,'2','E','E','3','E','A'  },
