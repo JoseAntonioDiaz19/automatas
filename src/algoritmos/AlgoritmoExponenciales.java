@@ -22,23 +22,23 @@ public class AlgoritmoExponenciales {
     /**
      * @return El arregloCadena_a_Char
      */
-    public char[] getArregloCadena_a_Char() {
+    public char[] getArregloCadenaChar() {
         return arregloCadena_a_Char;
     }
 
     /**
      * @param arregloCadena_a_Char Establecer arregloCadena_a_Char
      */
-    public void setArregloCadena_a_Char(char[] arregloCadena_a_Char) {
+    public void setArregloCadenaChar(char[] arregloCadena_a_Char) {
         this.arregloCadena_a_Char = arregloCadena_a_Char;
     }
 
     public void ingresarCadena(String Cadena){
-            setArregloCadena_a_Char(Cadena.toCharArray());
+            setArregloCadenaChar(Cadena.toCharArray());
     }
 
     private char Leer_Simbolo(int i){
-        return getArregloCadena_a_Char()[i];
+        return getArregloCadenaChar()[i];
     }
     /**
      * El metodo proceso realiza todo el procedimiento para saber si 
@@ -66,7 +66,7 @@ public class AlgoritmoExponenciales {
         tablaNumerosExponenciales = new Tabla_Numeros_Exponenciales();
         
         do{
-            if(i < getArregloCadena_a_Char().length){
+            if(i < getArregloCadenaChar().length){
                 
                 //Se asigna a S el simbolo actual para ser analizado 
                 S = Leer_Simbolo(i);
@@ -95,11 +95,11 @@ public class AlgoritmoExponenciales {
                     default:
                         Error(S);
                         Entrada = S;
-                        i=getArregloCadena_a_Char().length;
+                        i = getArregloCadenaChar().length;
                 }
 
                 System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-                Estado = tablaNumerosExponenciales.F(Estado, Entrada);
+                Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
                 
                 i++;
                 
@@ -107,11 +107,11 @@ public class AlgoritmoExponenciales {
 
                Entrada='F';
                System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-               Estado=tablaNumerosExponenciales.F(Estado, Entrada);
+               Estado=tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
                i++;
            }
             
-       }while(Estado!= 'E' && Estado!= 'A' && i <= getArregloCadena_a_Char().length);
+       }while(Estado!= 'E' && Estado!= 'A' && i <= getArregloCadenaChar().length);
 
         if(Estado == 'A'){
               return true;
