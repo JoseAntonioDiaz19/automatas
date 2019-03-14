@@ -18,6 +18,13 @@ public class proyecto1GUI extends javax.swing.JFrame {
      */
     public proyecto1GUI() {
         super("Validación de numeros reales con notación exponencial");
+        
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        setSize(width/2+180, height-200);		
+        setLocationRelativeTo(null);
+        
         setVisible(true);
         initComponents();
         personalizarComponentes();
