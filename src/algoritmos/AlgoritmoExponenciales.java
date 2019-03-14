@@ -5,19 +5,30 @@
  */
 package algoritmos;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import modelos.modeloProcedimiento;
 /**
  *
  * @author Alex Eliezer
  */
 public class AlgoritmoExponenciales {
     
+    private modeloProcedimiento modeloProcedimiento;
+    private ArrayList<modeloProcedimiento> listaProcedimiento = new ArrayList<>();
     private char Entrada;
     private char Estado;
     private char S;
     private Tabla_Numeros_Exponenciales tablaNumerosExponenciales;
     private char[] arregloCadena_a_Char;
     private int i;
+
+     /**
+     * @return the listaProcedimiento
+     */
+    public ArrayList<modeloProcedimiento> getListaProcedimiento() {
+        return listaProcedimiento;
+    }
     
     /**
      * @return El arregloCadena_a_Char
@@ -60,11 +71,9 @@ public class AlgoritmoExponenciales {
      * true and false respectivamente.
      */
     public boolean Proceso(){
-        
         Estado = '0';
         i = 0;
         tablaNumerosExponenciales = new Tabla_Numeros_Exponenciales();
-        
         do{
             if(i < getArregloCadenaChar().length){
                 
@@ -99,15 +108,22 @@ public class AlgoritmoExponenciales {
                 }
 
                 System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-                Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
                 
+                if (Estado == '0' ) {
+                    listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
+                }
+                
+                Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada); 
+                listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
                 i++;
                 
            }else{
-
-               Entrada='F';
+               
+               Entrada = 'F';
                System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-               Estado=tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
+               Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
+               listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
+               
                i++;
            }
             
@@ -116,7 +132,7 @@ public class AlgoritmoExponenciales {
         if(Estado == 'A'){
               return true;
         }
-        
+  
         else{
                return false;
         }
@@ -171,4 +187,6 @@ public class AlgoritmoExponenciales {
                 return Simbolo; 
         }
     }
+
+   
 }
