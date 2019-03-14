@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package algoritmos;
-
 /**
  *
  * @author Alex Eliezer
@@ -23,32 +22,26 @@ public class Tabla_Numeros_Exponenciales
         {'7' ,'7','E','E','E','E','A'  }
    };
    
-   
    public char F(char Estado, char Entrada)
    {
-       int PosicionF=0;
-       int PosicionC=0;
+       int PosicionF = 0;
+       int PosicionC = 0;
+       
        for (int i = 0; i < arreglo[0].length; i++) 
        {
-           if(arreglo[0][i]==Entrada)
+           if(arreglo[0][i] == Entrada)
            {
-              PosicionC=i;
+              PosicionC = i;
            }
        }
        for (int j = 0; j < arreglo.length; j++) 
        {
-           if(arreglo[j][0]==Estado)
+           if(arreglo[j][0] == Estado)
            {
-               PosicionF=j;
+               PosicionF = j;
            }
        }
-       return arreglo[PosicionF][PosicionC];
-       
+       return arreglo[PosicionF][PosicionC]; 
    }
    
-    public static void main(String[] args) 
-    {
-    Tabla_Numeros_Exponenciales objeto= new Tabla_Numeros_Exponenciales();
-        System.out.println("Estado: "+objeto.F('7','.'));
-    }
 }
