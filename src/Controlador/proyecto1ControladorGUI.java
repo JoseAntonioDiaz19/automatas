@@ -11,8 +11,10 @@ import java.awt.event.KeyListener;
 import GUI.proyecto1GUI;
 import algoritmos.AlgoritmoExponenciales;
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import modelos.modeloProcedimiento;
 /**
  *
  * @author Dizan
@@ -31,9 +33,9 @@ public class proyecto1ControladorGUI {
         eventosTeclado();   
         
         UIManager.put("OptionPane.background", new Color(0, 32, 96));
-        UIManager.put("OptionPane.font.foreground", new Color(255, 255, 255));
-        UIManager.put("Panel.background", new Color(0, 32, 96));
-       // UIManager.put("OptionPane.messageFont", new Font("Arial", 0, 16));
+        UIManager.put("OptionPane.foreground", new Color(255, 255, 255));
+        UIManager.put("Panel.background", new Color(46,117,182));
+        //UIManager.put("OptionPane.messageFont", new Font("Tahoma", 0, 14));
         
         proyecto1GUI.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
@@ -45,7 +47,7 @@ public class proyecto1ControladorGUI {
     
     private void close(){       
         if (JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?",
-                "Salir del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
+                "¿?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
        
         menuGui = new MenuGUI();
         MenuGUIControlador menuGUIControlador = new MenuGUIControlador(menuGui); 
@@ -79,10 +81,11 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"0");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero0(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"0");
     }
     public void numero1(ActionEvent e){
@@ -91,6 +94,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"1");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
         
     }
     public void numero1(){
@@ -100,6 +105,7 @@ public class proyecto1ControladorGUI {
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"1");
         
+        
     }
     public void numero2(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -107,6 +113,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"2");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero2(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -121,6 +129,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"3");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero3(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -135,6 +145,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"4");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero4(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -149,6 +161,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"5");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero5(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -163,6 +177,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"6");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
      public void numero6(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -177,6 +193,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"7");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero7(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -191,6 +209,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"8");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero8(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -205,6 +225,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"9"); 
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
      public void numero9(){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -215,8 +237,9 @@ public class proyecto1ControladorGUI {
     }
     public void punto(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+".");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void mas(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -224,6 +247,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"+");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void menos(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
@@ -231,6 +256,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"-");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
   
     public void exponente(ActionEvent e){
@@ -239,6 +266,8 @@ public class proyecto1ControladorGUI {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"e");
+        proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
+        proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     
     public void botonBorrar(ActionEvent e){
@@ -268,7 +297,12 @@ public class proyecto1ControladorGUI {
         }
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.WHITE);
-   
+        proyecto1GUI.modeloTablaPruebas.setRowCount(0);//Limpiar la tabla 
+       
+        ArrayList<modeloProcedimiento> listaProcedimiento = AlgoritmoExponenciales.getListaProcedimiento();
+        for (int i = 0; i < listaProcedimiento.size(); i++) {
+             editarIngresarFilas(listaProcedimiento.get(i));
+        }
     }
    
     private void eventosTeclado() {
@@ -321,12 +355,11 @@ public class proyecto1ControladorGUI {
         });  
     }
     
-    public void editarIngresarFilas(String valor1, String valor2, String valor3){
+    public void editarIngresarFilas(modeloProcedimiento modeloProcedimiento){
         //proyecto1GUI.tablaPruebas.setValueAt(valor, fila, columna);
-        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",valor1,valor2,valor3});
+        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",modeloProcedimiento.getEstado(),
+                                                               modeloProcedimiento.getS(),
+                                                               modeloProcedimiento.getEntrada()});
     }
-    
-    
-
-    
+       
 }
