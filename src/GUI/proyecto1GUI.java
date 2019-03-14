@@ -472,7 +472,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
         botonTablaFin.setBackground(new java.awt.Color(0, 32, 96));
         botonTablaFin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         botonTablaFin.setForeground(new java.awt.Color(255, 255, 255));
-        botonTablaFin.setText("Fdc");
+        botonTablaFin.setText("FDC");
         panelTablaTransicion.add(botonTablaFin);
 
         botonTablaQ0.setBackground(new java.awt.Color(0, 32, 96));
@@ -876,6 +876,7 @@ public class proyecto1GUI extends javax.swing.JFrame {
         botonDecidir.setBackground(new java.awt.Color(0, 36, 92));
         botonDecidir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         botonDecidir.setForeground(new java.awt.Color(255, 255, 255));
+        botonDecidir.setEnabled(false);
         panelDecidir.add(botonDecidir);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
