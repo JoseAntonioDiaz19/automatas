@@ -11,15 +11,19 @@ package modelos;
  */
 public class modeloProcedimiento {
     
+    private int contador;
     private char estado;
     private char S;
     private char Entrada;
 
-    public modeloProcedimiento(char estado, char S, char Entrada) {
+    public modeloProcedimiento(int contador, char estado, char S, char Entrada) {
+        this.contador = contador;
         this.estado = estado;
         this.S = S;
         this.Entrada = Entrada;
     }
+
+    
 
     /**
      * @return the estado
@@ -61,6 +65,20 @@ public class modeloProcedimiento {
      */
     public void setEntrada(char Entrada) {
         this.Entrada = Entrada;
+    }
+
+    /**
+     * @return the contador
+     */
+    public int getContador() {
+        return contador;
+    }
+
+    /**
+     * @param contador the contador to set
+     */
+    public void setContador(int contador) {
+        this.contador = contador;
     }
 
     
