@@ -12,7 +12,6 @@ import GUI.proyecto1GUI;
 import algoritmos.AlgoritmoExponenciales;
 import java.awt.Color;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import modelos.modeloProcedimiento;
 /**
@@ -46,8 +45,8 @@ public class proyecto1ControladorGUI {
     }
     
     private void close(){       
-        if (JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?",
-                "¿?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
+//        if (JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?",
+//                "¿?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
        
         menuGui = new MenuGUI();
         MenuGUIControlador menuGUIControlador = new MenuGUIControlador(menuGui); 
@@ -361,7 +360,7 @@ public class proyecto1ControladorGUI {
     
     public void editarIngresarFilas(modeloProcedimiento modeloProcedimiento){
         //proyecto1GUI.tablaPruebas.setValueAt(valor, fila, columna);
-        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{modeloProcedimiento.getContador(),
+        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",
                                                             modeloProcedimiento.getEstado(),
                                                             modeloProcedimiento.getS(),
                                                             modeloProcedimiento.getEntrada()});
