@@ -5,6 +5,8 @@
  */
 package GUI;
 import java.awt.*;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -54,6 +56,16 @@ public class proyecto1GUI extends javax.swing.JFrame {
        botonIniciar.setBackground(new Color(46,117,182));
        botonExponencial.setBackground(new Color(46,117,182));
        botonPunto.setBackground(new Color(46,117,182));
+       
+       //Tabla
+        DefaultTableCellRenderer modelocentrar = new DefaultTableCellRenderer();
+        modelocentrar.setHorizontalAlignment(SwingConstants.CENTER);
+        tablaPruebas.getColumnModel().getColumn(0).setCellRenderer(modelocentrar);
+        tablaPruebas.getColumnModel().getColumn(1).setCellRenderer(modelocentrar);
+        tablaPruebas.getColumnModel().getColumn(2).setCellRenderer(modelocentrar);
+        tablaPruebas.getColumnModel().getColumn(3).setCellRenderer(modelocentrar);
+       
+      
        
     }
     @SuppressWarnings("unchecked")
