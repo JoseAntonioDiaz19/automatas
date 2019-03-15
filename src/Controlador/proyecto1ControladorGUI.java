@@ -302,6 +302,10 @@ public class proyecto1ControladorGUI {
         ArrayList<modeloProcedimiento> listaProcedimiento = AlgoritmoExponenciales.getListaProcedimiento();
         for (int i = 0; i < listaProcedimiento.size(); i++) {
              editarIngresarFilas(listaProcedimiento.get(i));
+//             System.out.println(listaProcedimiento.get(i).getEstado()+"   "+ 
+//                               listaProcedimiento.get(i).getS()+"   "+ 
+//                               listaProcedimiento.get(i).getEntrada() );
+             
         }
     }
    
@@ -357,9 +361,10 @@ public class proyecto1ControladorGUI {
     
     public void editarIngresarFilas(modeloProcedimiento modeloProcedimiento){
         //proyecto1GUI.tablaPruebas.setValueAt(valor, fila, columna);
-        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",modeloProcedimiento.getEstado(),
-                                                               modeloProcedimiento.getS(),
-                                                               modeloProcedimiento.getEntrada()});
+        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{modeloProcedimiento.getContador(),
+                                                            modeloProcedimiento.getEstado(),
+                                                            modeloProcedimiento.getS(),
+                                                            modeloProcedimiento.getEntrada()});
     }
        
 }
