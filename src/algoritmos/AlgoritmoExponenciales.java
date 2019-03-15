@@ -106,27 +106,18 @@ public class AlgoritmoExponenciales {
                         Entrada = S;
                         i = getArregloCadenaChar().length;
                 }
-
                 System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-                
-                if (Estado == '0' ) {
-                    listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
-                }
-                
+                listaProcedimiento.add(new modeloProcedimiento(i,Estado, S, Entrada));
                 Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada); 
-                listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
-                i++;
-                
-           }else{
-               
+                i++; 
+                     
+            }else{
                Entrada = 'F';
                System.out.printf("%5s %5s %5s\n", Estado, S, Entrada);  
-               Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada);
-               listaProcedimiento.add(new modeloProcedimiento(Estado, S, Entrada));
-               
-               i++;
-           }
-            
+               listaProcedimiento.add(new modeloProcedimiento(i,Estado, S, Entrada));
+               Estado = tablaNumerosExponenciales.obtenerEstado_O_Validacion(Estado, Entrada); 
+            }
+              
        }while(Estado!= 'E' && Estado!= 'A' && i <= getArregloCadenaChar().length);
 
         if(Estado == 'A'){
