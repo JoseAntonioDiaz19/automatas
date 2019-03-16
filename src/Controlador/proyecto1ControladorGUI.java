@@ -18,11 +18,12 @@ import modelos.modeloProcedimiento;
  *
  * @author Dizan
  */
-public class proyecto1ControladorGUI {
+public class proyecto1ControladorGUI implements Runnable{
     
     proyecto1GUI proyecto1GUI;
     AlgoritmoExponenciales AlgoritmoExponenciales;
     MenuGUI menuGui;
+    Thread ingresarTabla;
 
     public proyecto1ControladorGUI(proyecto1GUI proyecto1GUI, MenuGUI menuGui) {
         this.proyecto1GUI =  proyecto1GUI;
@@ -277,13 +278,47 @@ public class proyecto1ControladorGUI {
     }
     
     public void botonIniciar(ActionEvent e){
+        proyecto1GUI.modeloTablaPruebas.setRowCount(0);//Limpiar la tabla 
+        if (ingresarTabla == null) {
+             ingresarTabla = new Thread(this);
+             ingresarTabla.start();
+        }   
+    }
+   
+    
+    
+    public void editarIngresarFilas(modeloProcedimiento modeloProcedimiento){
+        //proyecto1GUI.tablaPruebas.setValueAt(valor, fila, columna);
+        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",
+                                                            modeloProcedimiento.getEstado(),
+                                                            modeloProcedimiento.getS(),
+                                                            modeloProcedimiento.getEntrada()});
+    }
+
+    @Override
+    public void run() {
+        Thread thisThread = Thread.currentThread();
        
-       String cadena = proyecto1GUI.fieldEntradaSimbolos.getText();       
-       AlgoritmoExponenciales = new AlgoritmoExponenciales();
-       
-       AlgoritmoExponenciales.ingresarCadena(cadena);
-       boolean decicion = AlgoritmoExponenciales.Proceso();
-       System.out.println(decicion);
+        AlgoritmoExponenciales = new AlgoritmoExponenciales();
+        ArrayList<modeloProcedimiento> listaProcedimiento = AlgoritmoExponenciales.getListaProcedimiento();
+        String cadena = proyecto1GUI.fieldEntradaSimbolos.getText();       
+        AlgoritmoExponenciales.ingresarCadena(cadena);
+        boolean decicion = AlgoritmoExponenciales.Proceso();
+        System.out.println(decicion);
+     
+        while(ingresarTabla == thisThread){
+            
+                for (int i = 0; i < listaProcedimiento.size(); i++) {
+                    editarIngresarFilas(listaProcedimiento.get(i));
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException ex) {
+                        //No se me ocurre hacer algo :D
+                    }
+            }
+            //ingresarTabla = new Thread(this);
+            ingresarTabla = null;
+        } 
         
         if (decicion) {
             proyecto1GUI.botonDecidir.setBackground(new Color(0,102,51));
@@ -296,18 +331,9 @@ public class proyecto1ControladorGUI {
         }
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.WHITE);
-        proyecto1GUI.modeloTablaPruebas.setRowCount(0);//Limpiar la tabla 
-       
-        ArrayList<modeloProcedimiento> listaProcedimiento = AlgoritmoExponenciales.getListaProcedimiento();
-        for (int i = 0; i < listaProcedimiento.size(); i++) {
-             editarIngresarFilas(listaProcedimiento.get(i));
-//             System.out.println(listaProcedimiento.get(i).getEstado()+"   "+ 
-//                               listaProcedimiento.get(i).getS()+"   "+ 
-//                               listaProcedimiento.get(i).getEntrada() );
-             
-        }
+         
     }
-   
+    
     private void eventosTeclado() {
         proyecto1GUI.fieldEntradaSimbolos.addKeyListener(new KeyListener() {
             @Override
@@ -356,14 +382,5 @@ public class proyecto1ControladorGUI {
                 
             }
         });  
-    }
-    
-    public void editarIngresarFilas(modeloProcedimiento modeloProcedimiento){
-        //proyecto1GUI.tablaPruebas.setValueAt(valor, fila, columna);
-        proyecto1GUI.modeloTablaPruebas.addRow(new Object[]{"",
-                                                            modeloProcedimiento.getEstado(),
-                                                            modeloProcedimiento.getS(),
-                                                            modeloProcedimiento.getEntrada()});
-    }
-       
+    }    
 }
