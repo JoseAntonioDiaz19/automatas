@@ -22,9 +22,6 @@ public class modeloProcedimiento {
         this.S = S;
         this.Entrada = Entrada;
     }
-
-    
-
     /**
      * @return the estado
      */

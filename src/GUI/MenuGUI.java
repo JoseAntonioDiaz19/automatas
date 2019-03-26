@@ -14,21 +14,17 @@ import javax.swing.JFrame;
  * @author Dizan
  */
 public class MenuGUI extends javax.swing.JFrame {
-
     /**
      * Creates new form MenuGUI
      */
-    
-    
     public MenuGUI() {
         super("Proyectos");
-        
+        //Define donde aparece la pantalla
         Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
         int height = pantalla.height;
         int width = pantalla.width;
         setSize(width/2+180, height/2+100);		
         setLocationRelativeTo(null);
-        
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
