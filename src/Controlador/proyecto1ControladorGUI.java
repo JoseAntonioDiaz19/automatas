@@ -78,7 +78,7 @@ public class proyecto1ControladorGUI implements Runnable{
     
     public void numero0(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
+        if ("0".equals(labelCadena)) {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"0");
@@ -87,7 +87,7 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     public void numero1(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
+        if ("0".equals(labelCadena)) {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"1");
@@ -97,7 +97,7 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     public void numero2(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
+        if ("0".equals(labelCadena)) {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"2");
@@ -106,7 +106,7 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     public void numero3(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
+        if ("0".equals(labelCadena)) {
             labelCadena = "";
         }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"3");
@@ -116,9 +116,6 @@ public class proyecto1ControladorGUI implements Runnable{
    
     public void numero4(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"4");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -126,18 +123,12 @@ public class proyecto1ControladorGUI implements Runnable{
    
     public void numero5(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"5");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero6(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"6");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -145,18 +136,12 @@ public class proyecto1ControladorGUI implements Runnable{
    
     public void numero7(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"7");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero8(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"8");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -164,9 +149,6 @@ public class proyecto1ControladorGUI implements Runnable{
     
     public void numero9(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"9"); 
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -180,18 +162,12 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     public void mas(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"+");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void menos(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"-");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -199,16 +175,13 @@ public class proyecto1ControladorGUI implements Runnable{
   
     public void exponente(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"e");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     
     public void botonBorrar(ActionEvent e){
-         proyecto1GUI.fieldEntradaSimbolos.setText("");
+         proyecto1GUI.fieldEntradaSimbolos.setText("0");
          proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
          proyecto1GUI.fieldEntradaSimbolos.requestFocus();
          
@@ -237,12 +210,18 @@ public class proyecto1ControladorGUI implements Runnable{
                                                             modeloProcedimiento.getS(),
                                                             modeloProcedimiento.getEntrada()});
     }
+    
+    /*
+    Metodo run, ejecuta los hilos o subprocesos del programa
+    */
 
     @Override
     public void run() {
+        //Cambia el color del botonDecidir 
         proyecto1GUI.botonDecidir.setBackground(new Color(0,0,0));
         proyecto1GUI.botonDecidir.setText("");
         
+        //Obtiene el estado del hilo.
         Thread thisThread = Thread.currentThread();
        
         AlgoritmoExponenciales = new AlgoritmoExponenciales();
@@ -261,8 +240,7 @@ public class proyecto1ControladorGUI implements Runnable{
                     } catch (InterruptedException ex) {
                         //No se me ocurre hacer algo :D
                     }
-            }
-            //ingresarTabla = new Thread(this);
+            }  
             ingresarTabla = null;
         } 
         
@@ -278,6 +256,11 @@ public class proyecto1ControladorGUI implements Runnable{
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.WHITE); 
     }
+    
+    /*
+    Este metodo procesa los eventos de teclado, solo se ha definido el método 
+    keyTyped el cual procesa un evento al precionar la tecla enter.
+    */
     
     private void eventosTeclado() {
         proyecto1GUI.fieldEntradaSimbolos.addKeyListener(new KeyListener() {
