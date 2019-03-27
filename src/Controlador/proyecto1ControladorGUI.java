@@ -78,18 +78,12 @@ public class proyecto1ControladorGUI implements Runnable{
     
     public void numero0(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("0".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"0");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero1(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("0".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"1");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -97,18 +91,12 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     public void numero2(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("0".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"2");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
     }
     public void numero3(ActionEvent e){
         String labelCadena = proyecto1GUI.fieldEntradaSimbolos.getText();
-        if ("0".equals(labelCadena)) {
-            labelCadena = "";
-        }
         proyecto1GUI.fieldEntradaSimbolos.setText(labelCadena+"3");
         proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
         proyecto1GUI.fieldEntradaSimbolos.requestFocus();
@@ -181,7 +169,6 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     
     public void botonBorrar(ActionEvent e){
-         proyecto1GUI.fieldEntradaSimbolos.setText("0");
          proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
          proyecto1GUI.fieldEntradaSimbolos.requestFocus();
          
