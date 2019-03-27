@@ -169,6 +169,7 @@ public class proyecto1ControladorGUI implements Runnable{
     }
     
     public void botonBorrar(ActionEvent e){
+         proyecto1GUI.fieldEntradaSimbolos.setText("");
          proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
          proyecto1GUI.fieldEntradaSimbolos.requestFocus();
          
