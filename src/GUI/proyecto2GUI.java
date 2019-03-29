@@ -19,16 +19,22 @@ public class proyecto2GUI extends javax.swing.JFrame {
     public proyecto2GUI() {
         super("Maquina de dulces");
         setVisible(true);
-       // setSize(900, 600);
         initComponents();
-        
+        iconosBotones();
+        //setSize(900, 600);  
     }
     
     private void iconosBotones(){
-        String pathPeso = "/img/imgProyecto2/1peso125x125.png";  
+        
+        String pathPeso = "/img/1peso125x125.png";  
         URL urlPeso = this.getClass().getResource(pathPeso);  
         ImageIcon imgPeso = new ImageIcon(urlPeso);  
         botonUnPeso.setIcon(imgPeso);
+        
+//        String path2Pesos = "/img/2pesos.jpg";  
+//        URL url2Pesos = this.getClass().getResource(path2Pesos);  
+//        ImageIcon img2Pesos = new ImageIcon(url2Pesos);  
+//        botonUnPeso.setIcon(img2Pesos);
     }
 
     /**
@@ -140,7 +146,12 @@ public class proyecto2GUI extends javax.swing.JFrame {
         panelInferior.setBorder(javax.swing.BorderFactory.createTitledBorder("Panel inferior"));
         panelInferior.setLayout(new java.awt.GridBagLayout());
 
-        botonUnPeso.setText("$ 1");
+        botonUnPeso.setBackground(new java.awt.Color(0, 32, 96));
+        botonUnPeso.setActionCommand("");
+        botonUnPeso.setBorder(null);
+        botonUnPeso.setBorderPainted(false);
+        botonUnPeso.setFocusPainted(false);
+        botonUnPeso.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
