@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package GUI;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.net.URL;
 import javax.swing.ImageIcon;
 
@@ -18,23 +20,56 @@ public class proyecto2GUI extends javax.swing.JFrame {
      */
     public proyecto2GUI() {
         super("Maquina de dulces");
+        
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        setSize(width/2+180, height-200);		
+        setLocationRelativeTo(null);
         setVisible(true);
         initComponents();
         iconosBotones();
-        //setSize(900, 600);  
+        personalizarFuente();
+        setSize(600, 600);  
     }
     
     private void iconosBotones(){
         
-        String pathPeso = "/img/1peso125x125.png";  
+        String pathPeso = "/img/imgProyecto2/1peso125x125.png";  
         URL urlPeso = this.getClass().getResource(pathPeso);  
         ImageIcon imgPeso = new ImageIcon(urlPeso);  
         botonUnPeso.setIcon(imgPeso);
         
-//        String path2Pesos = "/img/2pesos.jpg";  
-//        URL url2Pesos = this.getClass().getResource(path2Pesos);  
-//        ImageIcon img2Pesos = new ImageIcon(url2Pesos);  
-//        botonUnPeso.setIcon(img2Pesos);
+        String path2Pesos = "/img/imgProyecto2/2pesos125x125.png";  
+        URL url2Pesos = this.getClass().getResource(path2Pesos);  
+        ImageIcon img2Pesos = new ImageIcon(url2Pesos);  
+        botonDosPesos.setIcon(img2Pesos);
+        
+        String path5Pesos = "/img/imgProyecto2/5pesos125x125.png";  
+        URL url5Pesos = this.getClass().getResource(path5Pesos);  
+        ImageIcon img5Pesos = new ImageIcon(url5Pesos);  
+        botonCincoPesos.setIcon(img5Pesos);
+        
+        String path10Pesos = "/img/imgProyecto2/10pesos125x125.png";  
+        URL url10Pesos = this.getClass().getResource(path10Pesos);  
+        ImageIcon img10Pesos = new ImageIcon(url10Pesos);  
+        botonDiezPesos.setIcon(img10Pesos);
+        
+        String path20Pesos = "/img/imgProyecto2/moneda20pesos125x125.png";  
+        URL url20Pesos = this.getClass().getResource(path20Pesos);  
+        ImageIcon img20Pesos = new ImageIcon(url20Pesos);  
+        botonVeintePesos.setIcon(img20Pesos);
+        
+        String pathElegirDuldes = "/img/imgProyecto2/elegirDulces.png";  
+        URL urlElegirDuldes = this.getClass().getResource(pathElegirDuldes);  
+        ImageIcon imgElegirDuldes = new ImageIcon(urlElegirDuldes);  
+        botonElegirProducto.setIcon(imgElegirDuldes);
+    }
+    
+    private void personalizarFuente(){
+        personalizarFuentes cf = new personalizarFuentes();
+        fieldSaldo.setFont(cf.miFuente(1, 96));
+        fieldCambio.setFont(cf.miFuente(1, 22));
     }
 
     /**
@@ -63,22 +98,22 @@ public class proyecto2GUI extends javax.swing.JFrame {
         botonRetirarSaldo = new javax.swing.JButton();
         botonValidar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 1));
 
         panelPrincipal.setBackground(new java.awt.Color(0, 32, 96));
         panelPrincipal.setLayout(new java.awt.GridBagLayout());
 
         panelSuperior.setBackground(new java.awt.Color(0, 32, 96));
-        panelSuperior.setBorder(javax.swing.BorderFactory.createTitledBorder("Panel superior"));
+        panelSuperior.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelSuperior.setForeground(new java.awt.Color(51, 51, 51));
         panelSuperior.setLayout(new java.awt.GridBagLayout());
 
+        fieldSaldo.setEditable(false);
         fieldSaldo.setBackground(new java.awt.Color(0, 0, 0));
         fieldSaldo.setFont(new java.awt.Font("Tahoma", 0, 72)); // NOI18N
         fieldSaldo.setForeground(new java.awt.Color(192, 0, 0));
         fieldSaldo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        fieldSaldo.setText("005");
+        fieldSaldo.setText("00");
         fieldSaldo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         fieldSaldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +130,8 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.weighty = 2.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         panelSuperior.add(fieldSaldo, gridBagConstraints);
+
+        botonDesicion.setBackground(new java.awt.Color(0, 32, 96));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -118,11 +155,12 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 0);
         panelSuperior.add(labelCambio, gridBagConstraints);
 
+        fieldCambio.setEditable(false);
         fieldCambio.setBackground(new java.awt.Color(0, 0, 0));
         fieldCambio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         fieldCambio.setForeground(new java.awt.Color(255, 255, 255));
         fieldCambio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        fieldCambio.setText("000");
+        fieldCambio.setText("00");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -137,19 +175,17 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipady = 50;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 0.2;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelPrincipal.add(panelSuperior, gridBagConstraints);
 
         panelInferior.setBackground(new java.awt.Color(0, 32, 96));
-        panelInferior.setBorder(javax.swing.BorderFactory.createTitledBorder("Panel inferior"));
         panelInferior.setLayout(new java.awt.GridBagLayout());
 
         botonUnPeso.setBackground(new java.awt.Color(0, 32, 96));
-        botonUnPeso.setActionCommand("");
-        botonUnPeso.setBorder(null);
-        botonUnPeso.setBorderPainted(false);
         botonUnPeso.setFocusPainted(false);
         botonUnPeso.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -157,86 +193,106 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonUnPeso, gridBagConstraints);
 
-        botonDosPesos.setText("$ 2");
+        botonDosPesos.setBackground(new java.awt.Color(0, 32, 96));
+        botonDosPesos.setToolTipText("");
+        botonDosPesos.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonDosPesos, gridBagConstraints);
 
-        botonCincoPesos.setText("$ 5");
+        botonCincoPesos.setBackground(new java.awt.Color(0, 32, 96));
+        botonCincoPesos.setFocusPainted(false);
+        botonCincoPesos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCincoPesosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonCincoPesos, gridBagConstraints);
 
-        botonDiezPesos.setText("$ 10");
+        botonDiezPesos.setBackground(new java.awt.Color(0, 32, 96));
+        botonDiezPesos.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonDiezPesos, gridBagConstraints);
 
-        botonVeintePesos.setText("$20");
+        botonVeintePesos.setBackground(new java.awt.Color(0, 32, 96));
+        botonVeintePesos.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonVeintePesos, gridBagConstraints);
 
-        botonElegirProducto.setText("Elegir Producto");
+        botonElegirProducto.setBackground(new java.awt.Color(0, 32, 96));
+        botonElegirProducto.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonElegirProducto, gridBagConstraints);
 
+        botonRetirarSaldo.setBackground(new java.awt.Color(47, 121, 121));
+        botonRetirarSaldo.setForeground(new java.awt.Color(255, 255, 255));
         botonRetirarSaldo.setText("Retirar sado");
+        botonRetirarSaldo.setBorder(null);
+        botonRetirarSaldo.setBorderPainted(false);
+        botonRetirarSaldo.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipady = 40;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonRetirarSaldo, gridBagConstraints);
 
+        botonValidar.setBackground(new java.awt.Color(46, 117, 182));
+        botonValidar.setForeground(new java.awt.Color(255, 255, 255));
         botonValidar.setText("Validar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipady = 30;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.weighty = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonValidar, gridBagConstraints);
 
@@ -247,6 +303,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         panelPrincipal.add(panelInferior, gridBagConstraints);
 
         getContentPane().add(panelPrincipal);
@@ -257,6 +314,10 @@ public class proyecto2GUI extends javax.swing.JFrame {
     private void fieldSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldSaldoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldSaldoActionPerformed
+
+    private void botonCincoPesosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCincoPesosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCincoPesosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,16 +355,16 @@ public class proyecto2GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonCincoPesos;
-    private javax.swing.JButton botonDesicion;
-    private javax.swing.JButton botonDiezPesos;
-    private javax.swing.JButton botonDosPesos;
-    private javax.swing.JButton botonElegirProducto;
-    private javax.swing.JButton botonRetirarSaldo;
-    private javax.swing.JButton botonUnPeso;
-    private javax.swing.JButton botonValidar;
-    private javax.swing.JButton botonVeintePesos;
-    private javax.swing.JTextField fieldCambio;
+    public javax.swing.JButton botonCincoPesos;
+    public javax.swing.JButton botonDesicion;
+    public javax.swing.JButton botonDiezPesos;
+    public javax.swing.JButton botonDosPesos;
+    public javax.swing.JButton botonElegirProducto;
+    public javax.swing.JButton botonRetirarSaldo;
+    public javax.swing.JButton botonUnPeso;
+    public javax.swing.JButton botonValidar;
+    public javax.swing.JButton botonVeintePesos;
+    public javax.swing.JTextField fieldCambio;
     private javax.swing.JTextField fieldSaldo;
     private javax.swing.JLabel labelCambio;
     private javax.swing.JPanel panelInferior;

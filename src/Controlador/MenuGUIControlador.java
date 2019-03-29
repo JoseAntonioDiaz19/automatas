@@ -35,5 +35,6 @@ public class MenuGUIControlador {
     private void botonProyecto2(ActionEvent e){
         proyecto2GUI proyecto2GUI = new proyecto2GUI();
         proyecto2ControladorGUI proyecto2ControladorGUI = new proyecto2ControladorGUI(proyecto2GUI );
+        menuGui.dispose();
     }
 }
