@@ -170,6 +170,7 @@ public class proyecto1ControladorGUI implements Runnable{
     
     public void botonBorrar(ActionEvent e){
          proyecto1GUI.fieldEntradaSimbolos.setText("");
+         proyecto1GUI.modeloTablaPruebas.setRowCount(0);//Limpiar la tabla 
          proyecto1GUI.fieldEntradaSimbolos.setCaretColor(Color.white);
          proyecto1GUI.fieldEntradaSimbolos.requestFocus();
          
