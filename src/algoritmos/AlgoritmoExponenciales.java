@@ -14,7 +14,6 @@ import modelos.modeloProcedimiento;
  */
 public class AlgoritmoExponenciales {
     
-    private modeloProcedimiento modeloProcedimiento;
     private ArrayList<modeloProcedimiento> listaProcedimiento = new ArrayList<>();
     private char Entrada;
     private char Estado;
