@@ -5,6 +5,11 @@
  */
 package GUI;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.net.URL;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Dizan
@@ -13,10 +18,69 @@ public class productosGUI extends java.awt.Dialog {
 
     /**
      * Creates new form productosGUI
+     * @param parent
+     * @param modal
      */
     public productosGUI(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+        super(parent, modal);	
+       
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        setSize(width/2+180, height-200);	
+        setLocationRelativeTo(null);
         initComponents();
+        botonesProductos();
+        
+        setSize(600, 600); 
+          
+    }
+    
+    private void botonesProductos(){
+        String pathProducto1 = "/img/imgProyecto2/bolitasdeleche128x128.png";  
+        URL urlProducto1 = this.getClass().getResource(pathProducto1);  
+        ImageIcon imgProducto1 = new ImageIcon(urlProducto1);  
+        botonProducto1.setIcon(imgProducto1);
+        
+        String pathProducto2 = "/img/imgProyecto2/churroloko128x128.png";  
+        URL urlProducto2 = this.getClass().getResource(pathProducto2);  
+        ImageIcon imgProducto2 = new ImageIcon(urlProducto2);  
+        botonProducto2.setIcon(imgProducto2);
+        
+        String pathProducto3 = "/img/imgProyecto2/gomangoenchilado128x128.png";  
+        URL urlProducto3 = this.getClass().getResource(pathProducto3);  
+        ImageIcon imgProducto3 = new ImageIcon(urlProducto3);  
+        botonProducto3.setIcon(imgProducto3);
+        
+        String pathProducto4 = "/img/imgProyecto2/gomikingmango128x128.png";  
+        URL urlProducto4 = this.getClass().getResource(pathProducto4);  
+        ImageIcon imgProducto4 = new ImageIcon(urlProducto4);  
+        botonProducto4.setIcon(imgProducto4);
+        
+        String pathProducto5 = "/img/imgProyecto2/gomitas128x128.png";  
+        URL urlProducto5 = this.getClass().getResource(pathProducto5);  
+        ImageIcon imgProducto5 = new ImageIcon(urlProducto5);  
+        botonProducto5.setIcon(imgProducto5);
+        
+        String pathProducto6 = "/img/imgProyecto2/kindersorpresa128x128.png";  
+        URL urlProducto6 = this.getClass().getResource(pathProducto6);  
+        ImageIcon imgProducto6 = new ImageIcon(urlProducto6);  
+        botonProducto6.setIcon(imgProducto6);
+        
+        String pathProducto7 = "/img/imgProyecto2/pulparingo128x128.png";  
+        URL urlProducto7 = this.getClass().getResource(pathProducto7);  
+        ImageIcon imgProducto7 = new ImageIcon(urlProducto7);  
+        botonProducto7.setIcon(imgProducto7);
+        
+        String pathProducto8 = "/img/imgProyecto2/skwinkles128x128.png";  
+        URL urlProducto8 = this.getClass().getResource(pathProducto8);  
+        ImageIcon imgProducto8 = new ImageIcon(urlProducto8);  
+        botonProducto8.setIcon(imgProducto8);
+        
+        String pathProducto9 = "/img/imgProyecto2/tamborines128x128.png";  
+        URL urlProducto9 = this.getClass().getResource(pathProducto9);  
+        ImageIcon imgProducto9 = new ImageIcon(urlProducto9);  
+        botonProducto9.setIcon(imgProducto9);
     }
 
     /**
@@ -29,6 +93,8 @@ public class productosGUI extends java.awt.Dialog {
         java.awt.GridBagConstraints gridBagConstraints;
 
         panelPrincipal = new javax.swing.JPanel();
+        panelProductosTitulo = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         panelProductos = new javax.swing.JPanel();
         botonProducto1 = new javax.swing.JButton();
         botonProducto2 = new javax.swing.JButton();
@@ -40,8 +106,6 @@ public class productosGUI extends java.awt.Dialog {
         botonProducto8 = new javax.swing.JButton();
         botonProducto9 = new javax.swing.JButton();
         botonCancelar = new javax.swing.JButton();
-        panelProductosTitulo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -53,9 +117,25 @@ public class productosGUI extends java.awt.Dialog {
         panelPrincipal.setBackground(new java.awt.Color(0, 32, 96));
         panelPrincipal.setLayout(new java.awt.GridBagLayout());
 
+        panelProductosTitulo.setBackground(new java.awt.Color(0, 32, 96));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Productos $25");
+        panelProductosTitulo.add(jLabel1);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        panelPrincipal.add(panelProductosTitulo, gridBagConstraints);
+
         panelProductos.setBackground(new java.awt.Color(0, 32, 96));
         panelProductos.setLayout(new java.awt.GridBagLayout());
 
+        botonProducto1.setBackground(new java.awt.Color(0, 32, 96));
+        botonProducto1.setFocusPainted(false);
         botonProducto1.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -67,6 +147,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto1, gridBagConstraints);
 
+        botonProducto2.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto2.setFocusPainted(false);
         botonProducto2.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -78,6 +160,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto2, gridBagConstraints);
 
+        botonProducto3.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto3.setFocusPainted(false);
         botonProducto3.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -89,6 +173,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto3, gridBagConstraints);
 
+        botonProducto4.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto4.setFocusPainted(false);
         botonProducto4.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -100,6 +186,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto4, gridBagConstraints);
 
+        botonProducto5.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto5.setFocusPainted(false);
         botonProducto5.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -111,6 +199,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto5, gridBagConstraints);
 
+        botonProducto6.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto6.setFocusPainted(false);
         botonProducto6.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -122,6 +212,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto6, gridBagConstraints);
 
+        botonProducto7.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto7.setFocusPainted(false);
         botonProducto7.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -133,6 +225,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto7, gridBagConstraints);
 
+        botonProducto8.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto8.setFocusPainted(false);
         botonProducto8.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -144,6 +238,8 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto8, gridBagConstraints);
 
+        botonProducto9.setBackground(new java.awt.Color(0, 96, 32));
+        botonProducto9.setFocusPainted(false);
         botonProducto9.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -155,12 +251,14 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelProductos.add(botonProducto9, gridBagConstraints);
 
-        botonCancelar.setBackground(new java.awt.Color(240, 189, 180));
+        botonCancelar.setBackground(new java.awt.Color(153, 0, 51));
+        botonCancelar.setForeground(new java.awt.Color(255, 255, 255));
         botonCancelar.setText("Cancelar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 0.5;
@@ -174,21 +272,6 @@ public class productosGUI extends java.awt.Dialog {
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         panelPrincipal.add(panelProductos, gridBagConstraints);
-
-        panelProductosTitulo.setBackground(new java.awt.Color(0, 32, 96));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Productos $25");
-        panelProductosTitulo.add(jLabel1);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        panelPrincipal.add(panelProductosTitulo, gridBagConstraints);
 
         add(panelPrincipal);
 

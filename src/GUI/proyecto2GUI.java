@@ -26,11 +26,12 @@ public class proyecto2GUI extends javax.swing.JFrame {
         int width = pantalla.width;
         setSize(width/2+180, height-200);		
         setLocationRelativeTo(null);
-        setVisible(true);
         initComponents();
         iconosBotones();
         personalizarFuente();
-        setSize(600, 600);  
+        setSize(600, 600); 
+        setVisible(true);
+         
     }
     
     private void iconosBotones(){
@@ -264,7 +265,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonElegirProducto, gridBagConstraints);
 
-        botonRetirarSaldo.setBackground(new java.awt.Color(47, 121, 121));
+        botonRetirarSaldo.setBackground(new java.awt.Color(153, 0, 51));
         botonRetirarSaldo.setForeground(new java.awt.Color(255, 255, 255));
         botonRetirarSaldo.setText("Retirar sado");
         botonRetirarSaldo.setBorder(null);
@@ -281,7 +282,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         panelInferior.add(botonRetirarSaldo, gridBagConstraints);
 
-        botonValidar.setBackground(new java.awt.Color(46, 117, 182));
+        botonValidar.setBackground(new java.awt.Color(0, 54, 75));
         botonValidar.setForeground(new java.awt.Color(255, 255, 255));
         botonValidar.setText("Validar");
         gridBagConstraints = new java.awt.GridBagConstraints();
