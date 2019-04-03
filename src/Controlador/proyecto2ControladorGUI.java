@@ -7,22 +7,31 @@ package Controlador;
 import GUI.MenuGUI;
 import GUI.productosGUI;
 import GUI.proyecto2GUI;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import modelos.modeloVenta;
 /**
  *
  * @author Dizan
  */
-public class proyecto2ControladorGUI {
+public class proyecto2ControladorGUI implements Runnable{
     
     proyecto2GUI proyecto2GUI;
     MenuGUI menuGui;
     modeloVenta modeloVenta = new modeloVenta();
+    Thread retirarSaldo;
 
     public proyecto2ControladorGUI(proyecto2GUI proyecto2GUI) {
         this.proyecto2GUI = proyecto2GUI;
         IniciarEventosBotones();
+        
+        //Modificar la apariencia del JOptionPane
+        UIManager.put("OptionPane.background", new Color(0, 32, 96));
+        UIManager.put("OptionPane.foreground", new Color(255, 255, 255));
+        UIManager.put("Panel.background", new Color(46,117,182));
+        //UIManager.put("OptionPane.messageFont", new Font("Tahoma", 0, 14));
       
          proyecto2GUI.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
@@ -99,6 +108,36 @@ public class proyecto2ControladorGUI {
     }
     
     private void botonRetirarSaldo(ActionEvent e){
+        if (retirarSaldo == null) {
+             retirarSaldo = new Thread(this);
+             retirarSaldo.start();
+        }  
+    }
+
+    @Override
+    public void run() {
+        //Obtiene el estado del hilo.
+        Thread thisThread = Thread.currentThread();
         
+        while(retirarSaldo == thisThread){
+        int saldo = modeloVenta.getSaldo();
+            while(saldo > 0) {
+                    saldo = saldo - 1;
+                    if (saldo > 9) {
+                        proyecto2GUI.fieldSaldo.setText((""+saldo));
+                        modeloVenta.setSaldo(saldo);
+                        System.out.println(saldo);
+                    }
+                    if (saldo < 10) {
+                        proyecto2GUI.fieldSaldo.setText(("0"+saldo));
+                        modeloVenta.setSaldo(saldo);
+                        System.out.println(saldo);
+                    }
+                    try {
+                        Thread.sleep(80);
+                    } catch (InterruptedException ex) {}    
+                }
+            retirarSaldo = null;
+        }
     }
 }

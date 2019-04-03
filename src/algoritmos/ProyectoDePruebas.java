@@ -6,10 +6,9 @@
 package algoritmos;
 
 import javax.swing.JOptionPane;
-
 /**
  *
- * @author AxiosGaming
+ * @author Eliezer
  */
 public class ProyectoDePruebas {
 
