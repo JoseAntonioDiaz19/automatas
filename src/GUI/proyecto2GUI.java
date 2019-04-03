@@ -366,7 +366,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
     public javax.swing.JButton botonValidar;
     public javax.swing.JButton botonVeintePesos;
     public javax.swing.JTextField fieldCambio;
-    private javax.swing.JTextField fieldSaldo;
+    public javax.swing.JTextField fieldSaldo;
     private javax.swing.JLabel labelCambio;
     private javax.swing.JPanel panelInferior;
     private javax.swing.JPanel panelPrincipal;

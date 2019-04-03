@@ -305,16 +305,16 @@ public class productosGUI extends java.awt.Dialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonCancelar;
-    private javax.swing.JButton botonProducto1;
-    private javax.swing.JButton botonProducto2;
-    private javax.swing.JButton botonProducto3;
-    private javax.swing.JButton botonProducto4;
-    private javax.swing.JButton botonProducto5;
-    private javax.swing.JButton botonProducto6;
-    private javax.swing.JButton botonProducto7;
-    private javax.swing.JButton botonProducto8;
-    private javax.swing.JButton botonProducto9;
+    public javax.swing.JButton botonCancelar;
+    public javax.swing.JButton botonProducto1;
+    public javax.swing.JButton botonProducto2;
+    public javax.swing.JButton botonProducto3;
+    public javax.swing.JButton botonProducto4;
+    public javax.swing.JButton botonProducto5;
+    public javax.swing.JButton botonProducto6;
+    public javax.swing.JButton botonProducto7;
+    public javax.swing.JButton botonProducto8;
+    public javax.swing.JButton botonProducto9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelProductos;
