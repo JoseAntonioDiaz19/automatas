@@ -37,15 +37,17 @@ public class productosGUIControlador {
         productosGUI.botonProducto7.addActionListener(this::botonProducto7);
         productosGUI.botonProducto8.addActionListener(this::botonProducto8);
         productosGUI.botonProducto9.addActionListener(this::botonProducto9);
+        productosGUI.botonCancelar.addActionListener(this::botonCancelar);
     }
     
     private void botonProducto1(ActionEvent e){
         System.out.println("boton 1");
-        descontarCompra();
+        proyecto2GUI.fieldCambio.setText("00");
+        descontarCompra(); 
         
     }
     private void botonProducto2(ActionEvent e){
-        System.out.println("boton 2");
+        System.out.println("boton 2");        
         descontarCompra();
     }
     private void botonProducto3(ActionEvent e){
@@ -82,5 +84,15 @@ public class productosGUIControlador {
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
         productosGUI.dispose();
+        if (saldo < 25) {
+            proyecto2GUI.fieldSaldo.setText("00");
+            modeloVenta.setSaldo(0);
+            proyecto2GUI.fieldCambio.setText(""+saldo);
+            modeloVenta.setCambio(saldo);
+        }
+    }
+    
+    private void botonCancelar(ActionEvent e){
+         productosGUI.dispose();
     }
 }
