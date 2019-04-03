@@ -48,6 +48,7 @@ public class proyecto2ControladorGUI {
         proyecto2GUI.botonDiezPesos.addActionListener(this::botonDiezPesos);
         proyecto2GUI.botonVeintePesos.addActionListener(this::botonVeintePesos);
         proyecto2GUI.botonValidar.addActionListener(this::botonValidar);
+        proyecto2GUI.botonRetirarSaldo.addActionListener(this::botonRetirarSaldo);
     }
     
     private void botonElegirProducto(ActionEvent e){
@@ -59,36 +60,45 @@ public class proyecto2ControladorGUI {
     }
     
     private void botonUnPeso(ActionEvent e){
+        proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         saldo = saldo + 1;    
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
     }
     private void botonDosPesos(ActionEvent e){
+        proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         saldo = saldo + 2; 
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
     }
     private void botonCincoPesos(ActionEvent e){
+        proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         saldo = saldo + 5; 
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
     }
     private void botonDiezPesos(ActionEvent e){
+        proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         saldo = saldo + 10; 
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
     }
     private void botonVeintePesos(ActionEvent e){
+        proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         saldo = saldo + 20; 
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
     }
     private void botonValidar(ActionEvent e){
+        
+    }
+    
+    private void botonRetirarSaldo(ActionEvent e){
         
     }
 }
