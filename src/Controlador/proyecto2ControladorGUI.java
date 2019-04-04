@@ -76,12 +76,11 @@ public class proyecto2ControladorGUI implements Runnable{
     private void botonUnPeso(ActionEvent e){
         proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
-        
-        modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(1)));
-        if (saldo >25) { modeloVenta.setEstado(25);}
+       
+        if (saldo > 25) { modeloVenta.setEstado(25);}
         if (saldo == 0) modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(1)));
         else modeloVenta.setEstado(algoritmoMaquina.Proceso(modeloVenta.getEstado(), String.valueOf(1)));
-        proyecto2GUI.botonDesicion.setText("Estado: "+ modeloVenta.getEstado());
+        proyecto2GUI.botonDesicion.setText("Estado: " + modeloVenta.getEstado());
  
         saldo = saldo + 1;    
         modeloVenta.setSaldo(saldo);
@@ -90,12 +89,11 @@ public class proyecto2ControladorGUI implements Runnable{
     private void botonDosPesos(ActionEvent e){
         proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
-        
-        modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(2)));
+
         if (saldo >25) { modeloVenta.setEstado(25);}
         if (saldo == 0) modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(2)));
         else modeloVenta.setEstado(algoritmoMaquina.Proceso(modeloVenta.getEstado(), String.valueOf(2)));
-        proyecto2GUI.botonDesicion.setText("Estado: "+ modeloVenta.getEstado());
+        proyecto2GUI.botonDesicion.setText("Estado: " + modeloVenta.getEstado());
         
         saldo = saldo + 2; 
         modeloVenta.setSaldo(saldo);
@@ -105,7 +103,6 @@ public class proyecto2ControladorGUI implements Runnable{
         proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         
-        modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(5)));
         if (saldo >25) { modeloVenta.setEstado(25);}
         if (saldo == 0) modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(5)));
         else modeloVenta.setEstado(algoritmoMaquina.Proceso(modeloVenta.getEstado(), String.valueOf(5)));
@@ -119,7 +116,6 @@ public class proyecto2ControladorGUI implements Runnable{
         proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
         
-        modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(10)));
         if (saldo >25) { modeloVenta.setEstado(25);}
         if (saldo == 0) modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(10)));
         else modeloVenta.setEstado(algoritmoMaquina.Proceso(modeloVenta.getEstado(), String.valueOf(10)));
@@ -134,7 +130,6 @@ public class proyecto2ControladorGUI implements Runnable{
         proyecto2GUI.fieldCambio.setText("00");
         int saldo = modeloVenta.getSaldo();
 
-        modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(20)));
         if (saldo >25) { modeloVenta.setEstado(25);}
         if (saldo == 0) modeloVenta.setEstado(algoritmoMaquina.Proceso(saldo, String.valueOf(20)));
         else modeloVenta.setEstado(algoritmoMaquina.Proceso(modeloVenta.getEstado(), String.valueOf(20)));
@@ -174,8 +169,10 @@ public class proyecto2ControladorGUI implements Runnable{
                         modeloVenta.setSaldo(saldo);
                         System.out.println(saldo);
                     }
+                    modeloVenta.setEstado(saldo);
+                    proyecto2GUI.botonDesicion.setText("Estado: "+ modeloVenta.getEstado());
                     try {
-                        Thread.sleep(80);
+                        Thread.sleep(2000);
                     } catch (InterruptedException ex) {}    
                 }
             retirarSaldo = null;
