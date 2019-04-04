@@ -10,16 +10,23 @@ import javax.swing.JOptionPane;
  *
  * @author Eliezer
  */
-public class ProyectoDePruebas {
+public class ProyectoDePruebas 
+{
 
-    public void Proceso()
-    {
         int Acum=0;
         int Estado=0;
         String S=" ";
-        while(!"Fdc".equals(S) && Estado!= -1)
+        
+    public int  Proceso( int Estado,String S )
+    {
+        
+        this.Estado=Estado;
+        this.S=S;
+        
+        if(!"Fdc".equals(S) && Estado!= -1)
         {
-            S=LeerSimbolo();
+            //S=LeerSimbolo();
+            
             if(!"Fdc".equals(S))
             {
             Acum=Acum+Integer.parseInt(S);
@@ -623,17 +630,35 @@ public class ProyectoDePruebas {
                  
     }
         
-        if(Estado==25)
+        
+        return Estado;
+    }
+    
+    
+    
+    public int [] Validar( int e)
+    {
+        
+        int arreglo[]= new int[2];
+        if(e==25)
         {
             JOptionPane.showMessageDialog(null,"Cantidad Valida");
             System.out.println("Numero De Dulces A Elegir: "+(Acum/25));
+            arreglo[0]=Acum/25;
             System.out.println("Cambio: "+(Acum%25));
+            arreglo[1]=Acum%25;
         }else
         {
-            JOptionPane.showMessageDialog(null,"Error","Cantidad No Valida",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Error","No Hay Suficiente Credito",JOptionPane.ERROR_MESSAGE);
+            System.out.println("Numero De Dulces A Elegir: "+(Acum/25));
+            arreglo[0]=Acum/25;
+            System.out.println("Cambio: "+(Acum%25));
+            arreglo[1]=Acum%25;
+            
         }
+        
+        return arreglo;
     }
-    
     public void Error()
     {
         JOptionPane.showMessageDialog(null,"Error","Simbolo No Valido", JOptionPane.ERROR_MESSAGE);
@@ -647,7 +672,7 @@ public class ProyectoDePruebas {
 public static void main(String[] args)
     {
         ProyectoDePruebas o= new ProyectoDePruebas();
-    o.Proceso();
+        //o.Proceso();
     }
 
 
