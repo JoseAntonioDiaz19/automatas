@@ -174,7 +174,6 @@ public class PruebaDulces extends javax.swing.JFrame {
        // Acum estado String
     if(primero==true)
     {
-        restar();
         Estado=objeto.Proceso(0,"1");
         primero=false;
         
@@ -190,7 +189,6 @@ public class PruebaDulces extends javax.swing.JFrame {
         // TODO add your handling code here:
     if(primero==true)
     {
-        restar();
         Estado=objeto.Proceso(0,"2");
         primero=false;
     }    else
@@ -205,7 +203,6 @@ public class PruebaDulces extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(primero==true)
     {
-        restar();
         Estado=objeto.Proceso( 0,"5");
         primero=false;
     }else
@@ -221,7 +218,6 @@ public class PruebaDulces extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(primero==true)
     {
-        restar();
         Estado=objeto.Proceso( 0,"10");
         primero=false;
     }else
@@ -236,7 +232,6 @@ public class PruebaDulces extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(primero==true)
     {
-        restar();
         Estado=objeto.Proceso( 0,"20");
         primero=false;
     }else
@@ -257,7 +252,7 @@ public class PruebaDulces extends javax.swing.JFrame {
         Cambio.setText(""+arreglo[1]);
         Credito.setText("0.0");
         
-   // restar();    
+    restar();    
         //Credito.setText(""+objeto.Acum);   
     }//GEN-LAST:event_jButton6ActionPerformed
 public void restar()
@@ -265,7 +260,7 @@ public void restar()
     Estado=0;
     primero=true;
     objeto.Acum=0;
-   Cambio.setText("0.0");
+    //Cambio.setText("0.0");
         }
     /**
      * @param args the command line arguments
