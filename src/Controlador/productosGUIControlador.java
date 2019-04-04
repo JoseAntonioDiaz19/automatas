@@ -20,7 +20,10 @@ public class productosGUIControlador {
     modeloVenta modeloVenta;
     proyecto2GUI proyecto2GUI;
 
-    public productosGUIControlador(productosGUI productosGUI,  modeloVenta modeloVenta, proyecto2GUI proyecto2GUI) {
+    public productosGUIControlador(productosGUI productosGUI,  
+                                    modeloVenta modeloVenta, 
+                                    proyecto2GUI proyecto2GUI) {
+        
         this.productosGUI = productosGUI;
         this.modeloVenta = modeloVenta;
         this.proyecto2GUI = proyecto2GUI;
@@ -89,6 +92,8 @@ public class productosGUIControlador {
             modeloVenta.setSaldo(0);
             proyecto2GUI.fieldCambio.setText(""+saldo);
             modeloVenta.setCambio(saldo);
+            modeloVenta.setEstado(0);
+            proyecto2GUI.botonDesicion.setText("Estado: " + 0 );
         }
     }
     

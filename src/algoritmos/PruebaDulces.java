@@ -10,13 +10,12 @@ package algoritmos;
  * @author Alex Eliezer
  */
 public class PruebaDulces extends javax.swing.JFrame {
-
     /**
      * Creates new form PruebaDulces
      */
-    ProyectoDePruebas objeto= new ProyectoDePruebas();
-    int Estado=0;
-    boolean primero=true;
+    algoritmoMaquinaDulces objeto = new algoritmoMaquinaDulces();
+    int Estado = 0;
+    boolean primero = true;
     
     public PruebaDulces() {
         initComponents();
@@ -172,10 +171,10 @@ public class PruebaDulces extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        // Acum estado String
-    if(primero==true)
+    if(primero == true)
     {
-        Estado=objeto.Proceso(0,"1");
-        primero=false;
+        Estado = objeto.Proceso(0,"1");
+        primero = false;
         
     }else
     {
@@ -187,13 +186,13 @@ public class PruebaDulces extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    if(primero==true)
+    if(primero == true)
     {
-        Estado=objeto.Proceso(0,"2");
-        primero=false;
+        Estado = objeto.Proceso(0,"2");
+        primero = false;
     }    else
     {
-        Estado=objeto.Proceso( Estado,"2");
+        Estado = objeto.Proceso( Estado,"2");
         
     }
         Credito.setText(""+objeto.Acum);   

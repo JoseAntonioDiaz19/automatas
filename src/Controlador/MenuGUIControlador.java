@@ -9,7 +9,6 @@ import GUI.proyecto1GUI;
 import GUI.proyecto2GUI;
 import java.awt.event.ActionEvent;
 /**
- *
  * @author Dizan
  */
 public class MenuGUIControlador {

@@ -12,6 +12,7 @@ public class modeloVenta {
     
     private int saldo;
     private int cambio;
+    private int estado;
 
     /**
      * @return the saldo
@@ -39,6 +40,20 @@ public class modeloVenta {
      */
     public void setCambio(int cambio) {
         this.cambio = cambio;
+    }
+
+    /**
+     * @return the estado
+     */
+    public int getEstado() {
+        return estado;
+    }
+
+    /**
+     * @param estado the estado to set
+     */
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
             
 }

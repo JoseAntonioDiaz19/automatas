@@ -133,6 +133,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
         panelSuperior.add(fieldSaldo, gridBagConstraints);
 
         botonDesicion.setBackground(new java.awt.Color(0, 32, 96));
+        botonDesicion.setForeground(new java.awt.Color(255, 255, 255));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;

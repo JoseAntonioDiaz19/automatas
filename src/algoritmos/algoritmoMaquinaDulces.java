@@ -4,24 +4,24 @@
  * and open the template in the editor.
  */
 package algoritmos;
-
 import javax.swing.JOptionPane;
 /**
  *
  * @author Eliezer
  */
-public class ProyectoDePruebas 
+public class algoritmoMaquinaDulces 
 {
 
-        int Acum=0;
-        int Estado=0;
-        String S=" ";
+        public int Acum = 0;
+        int Estado = 0;
+        public boolean validar = false;
+        String S = " ";
         
-    public int  Proceso( int Estado,String S )
+    public int  Proceso( int Estado, String S )
     {
         
         this.Estado=Estado;
-        this.S=S;
+        this.S = S;
         
         if(!"Fdc".equals(S) && Estado!= -1)
         {
@@ -29,26 +29,33 @@ public class ProyectoDePruebas
             
             if(!"Fdc".equals(S))
             {
-            Acum=Acum+Integer.parseInt(S);
-    switch(Estado)
-            {
-                case 0:
+                
+            Acum = Acum + Integer.parseInt(S);
+            
+    switch(Estado){
+                
+            case 0:
                     switch(S)
                     {
                         case "1":
                             Estado=1;
+                            validar = false;
                             break;
                         case "2":
                             Estado=2;
+                            validar = false;
                             break;
                         case "5":
                             Estado=5;
+                            validar = false;
                             break;
                         case "10":
                             Estado=10;
+                            validar = false;
                             break;
                         case "20":
                             Estado=20;
+                            validar = false;
                             break;
                         default:
                             Error();
@@ -58,19 +65,24 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=2;
+                            Estado = 2;
+                            validar = false;
                             break;
                         case "2":
                             Estado=3;
+                            validar = false;
                             break;
                         case "5":
                             Estado=6;
+                            validar = false;
                             break;
                         case "10":
                             Estado=11;
+                            validar = false;
                             break;
                         case "20":
                             Estado=21;
+                            validar = false;
                             break;
                         default:
                             Error();
@@ -81,18 +93,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=3;
+                            validar = false;
                             break;
                         case "2":
                             Estado=4;
+                            validar = false;
                             break;
                         case "5":
                             Estado=7;
+                            validar = false;
                             break;
                         case "10":
                             Estado=12;
+                            validar = false;
                             break;
                         case "20":
                             Estado=22;
+                            validar = false;
                             break;
                         default:
                             Error();
@@ -103,18 +120,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=4;
+                            validar = false;
                             break;
                         case "2":
                             Estado=5;
+                            validar = false;
                             break;
                         case "5":
                             Estado=8;
+                            validar = false;
                             break;
                         case "10":
                             Estado=13;
+                            validar = false;
                             break;
                         case "20":
                             Estado=23;
+                            validar = false;
                             break;
                         default:
                             Error();
@@ -125,18 +147,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=5;
+                            validar = false;
                             break;
                         case "2":
                             Estado=6;
+                            validar = false;
                             break;
                         case "5":
                             Estado=9;
+                            validar = false;
                             break;
                         case "10":
                             Estado=14;
+                            validar = false;
                             break;
                         case "20":
                             Estado=24;
+                            validar = false;
                             break;
                         default:
                             Error();
@@ -147,18 +174,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=6;
+                            validar = false;
                             break;
                         case "2":
                             Estado=7;
+                            validar = false;
                             break;
                         case "5":
                             Estado=10;
+                            validar = false;
                             break;
                         case "10":
                             Estado=15;
+                            validar = false;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -169,18 +201,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=7;
+                            validar = false;
                             break;
                         case "2":
                             Estado=8;
+                            validar = false;
                             break;
                         case "5":
                             Estado=11;
+                            validar = false;
                             break;
                         case "10":
                             Estado=16;
+                            validar = false;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -191,18 +228,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=8;
+                            validar = false;
                             break;
                         case "2":
                             Estado=9;
+                            validar = false;
                             break;
                         case "5":
                             Estado=12;
+                            validar = false;
                             break;
                         case "10":
                             Estado=17;
+                            validar = false;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -213,18 +255,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=9;
+                            validar = false;
                             break;
                         case "2":
                             Estado=10;
+                            validar = false;
                             break;
                         case "5":
                             Estado=13;
+                            validar = false;
                             break;
                         case "10":
                             Estado=18;
+                            validar = false;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -234,19 +281,24 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=10;
+                            Estado = 10;
+                            validar = false;
                             break;
                         case "2":
-                            Estado=11;
+                            Estado = 11;
+                            validar = false;
                             break;
                         case "5":
-                            Estado=14;
+                            Estado = 14;
+                            validar = false;
                             break;
                         case "10":
-                            Estado=19;
+                            Estado = 19;
+                            validar = false;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -256,19 +308,24 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=11;
+                            Estado = 11;
+                            validar = false;
                             break;
                         case "2":
-                            Estado=12;
+                            Estado = 12;
+                            validar = false;
                             break;
                         case "5":
-                            Estado=15;
+                            Estado = 15;
+                            validar = false;
                             break;
                         case "10":
-                            Estado=20;
+                            Estado = 20;
+                            validar = false;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -280,18 +337,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=12;
+                            validar = false;
                             break;
                         case "2":
                             Estado=13;
+                            validar = false;
                             break;
                         case "5":
                             Estado=16;
+                            validar = false;
                             break;
                         case "10":
                             Estado=21;
+                            validar = false;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -302,19 +364,24 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=13;
+                            Estado = 13;
+                            validar = false;
                             break;
                         case "2":
-                            Estado=14;
+                            Estado = 14;
+                            validar = false;
                             break;
                         case "5":
-                            Estado=17;
+                            Estado = 17;
+                            validar = false;
                             break;
                         case "10":
-                            Estado=22;
+                            Estado = 22;
+                            validar = false;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -324,19 +391,24 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=14;
+                            Estado = 14;
+                            validar = false;
                             break;
                         case "2":
-                            Estado=15;
+                            Estado = 15;
+                            validar = false;
                             break;
                         case "5":
-                            Estado=18;
+                            Estado = 18;
+                            validar = false;
                             break;
                         case "10":
-                            Estado=23;
+                            Estado = 23;
+                            validar = false;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -347,18 +419,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=15;
+                            validar = false;
                             break;
                         case "2":
                             Estado=16;
+                            validar = false;
                             break;
                         case "5":
                             Estado=19;
+                            validar = false;
                             break;
                         case "10":
                             Estado=24;
+                            validar = false;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -369,18 +446,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=16;
+                            validar = true;
                             break;
                         case "2":
                             Estado=17;
+                            validar = false;
                             break;
                         case "5":
                             Estado=20;
+                            validar = false;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -391,18 +473,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=17;
+                            validar = false;
                             break;
                         case "2":
                             Estado=18;
+                            validar = false;
                             break;
                         case "5":
                             Estado=21;
+                            validar = false;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -414,18 +501,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=18;
+                            validar = false;
                             break;
                         case "2":
                             Estado=19;
+                            validar = false;
                             break;
                         case "5":
                             Estado=22;
+                            validar = false;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -437,18 +529,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=19;
+                            validar = false;
                             break;
                         case "2":
                             Estado=20;
+                            validar = false;
                             break;
                         case "5":
                             Estado=23;
+                            validar = false;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -461,18 +558,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=20;
+                            validar = false;
                             break;
                         case "2":
                             Estado=21;
+                            validar = false;
                             break;
                         case "5":
                             Estado=24;
+                            validar = false;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -485,18 +587,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=21;
+                            validar = false;
                             break;
                         case "2":
                             Estado=22;
+                            validar = false;
                             break;
                         case "5":
                             Estado=25;
+                            validar = true;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -508,18 +615,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=22;
+                            validar = false;
                             break;
                         case "2":
                             Estado=23;
+                            validar = false;
                             break;
                         case "5":
                             Estado=25;
+                            validar = true;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -531,18 +643,23 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=23;
+                            validar = false;
                             break;
                         case "2":
                             Estado=24;
+                            validar = false;
                             break;
                         case "5":
                             Estado=25;
+                            validar = true;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -553,19 +670,25 @@ public class ProyectoDePruebas
                 switch(S)
                     {
                         case "1":
-                            Estado=24;
+                            Estado = 24;
+                            validar = false;
                             break;
                         case "2":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
+                           
                             break;
                         case "5":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;                          
                             break;
                         case "10":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         case "20":
-                            Estado=25;
+                            Estado = 25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -577,42 +700,54 @@ public class ProyectoDePruebas
                     {
                         case "1":
                             Estado=25;
+                            validar = true;
                             break;
                         case "2":
                             Estado=25;
+                            validar = true;
                             break;
                         case "5":
                             Estado=25;
+                            validar = true;
                             break;
                         case "10":
                             Estado=25;
+                            validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
                     }
                     break;            
-                
-                
+        
                 case 25:
                 switch(S)
                     {
                         case "1":
                             Estado=25;
+                            validar = true;
+                           
                             break;
                         case "2":
                             Estado=25;
+                            validar = true;
+                          
                             break;
                         case "5":
                             Estado=25;
+                            validar = true;
+                         
                             break;
                         case "10":
                             Estado=25;
+                           validar = true;
                             break;
                         case "20":
                             Estado=25;
+                            validar = true;
                             break;
                         default:
                             Error();
@@ -629,7 +764,6 @@ public class ProyectoDePruebas
             }
                  
     }
-        
         
         return Estado;
     }
@@ -671,7 +805,7 @@ public class ProyectoDePruebas
 
 public static void main(String[] args)
     {
-        ProyectoDePruebas o= new ProyectoDePruebas();
+        algoritmoMaquinaDulces o= new algoritmoMaquinaDulces();
         //o.Proceso();
     }
 
