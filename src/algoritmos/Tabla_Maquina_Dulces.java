@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package automatas;
+package algoritmos;
 
 /**
  *
@@ -22,32 +22,26 @@ String [][] arreglo=
     {"25","25","25","25","A"}    
 };
 
-public String F(String Estado,String Entrada)
-{
-    int PosicionF=0, PosicionC=0;
-    
-    for (int i = 0; i < arreglo[0].length; i++) 
-    {
-        if(arreglo[0][i]==Entrada)
+public String F(String Estado,String Entrada){
+        int PosicionF=0, PosicionC=0;
+
+        for (int i = 0; i < arreglo[0].length; i++) 
         {
-            PosicionC=i;
+            if(arreglo[0][i]==Entrada)
+            {
+                PosicionC=i;
+            }
         }
-    }
-    
-    for (int j = 0; j < arreglo.length; j++) 
-    {
-        if(arreglo[j][0]==Estado)
+
+        for (int j = 0; j < arreglo.length; j++) 
         {
-            PosicionF=j;
+            if(arreglo[j][0]==Estado)
+            {
+                PosicionF=j;
+            }
         }
+        return arreglo[PosicionF][PosicionC];
     }
-    return arreglo[PosicionF][PosicionC];
-}
-
-    
-    
-
-
 }
 
 

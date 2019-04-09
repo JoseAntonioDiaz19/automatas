@@ -6,6 +6,7 @@
 package Controlador;
 import GUI.productosGUI;
 import GUI.proyecto2GUI;
+import algoritmos.algoritmoMaquinaDulces;
 import java.awt.event.ActionEvent;
 import modelos.modeloVenta;
 
@@ -19,14 +20,17 @@ public class productosGUIControlador {
     proyecto2ControladorGUI proyecto2ControladorGUI;
     modeloVenta modeloVenta;
     proyecto2GUI proyecto2GUI;
+    algoritmoMaquinaDulces algoritmoMaquina;
 
     public productosGUIControlador(productosGUI productosGUI,  
                                     modeloVenta modeloVenta, 
-                                    proyecto2GUI proyecto2GUI) {
+                                    proyecto2GUI proyecto2GUI,
+                                    algoritmoMaquinaDulces algoritmoMaquina) {
         
         this.productosGUI = productosGUI;
         this.modeloVenta = modeloVenta;
         this.proyecto2GUI = proyecto2GUI;
+        this.algoritmoMaquina = algoritmoMaquina;
         IniciarEventosBotones();
     }   
     
@@ -74,11 +78,11 @@ public class productosGUIControlador {
         descontarCompra();
     }
     private void botonProducto8(ActionEvent e){
-         System.out.println("boton 8");
+        System.out.println("boton 8");
         descontarCompra();
     }
     private void botonProducto9(ActionEvent e){
-         System.out.println("boton 9");
+        System.out.println("boton 9");
         descontarCompra();
     }
     private void descontarCompra(){
@@ -87,6 +91,7 @@ public class productosGUIControlador {
         modeloVenta.setSaldo(saldo);
         proyecto2GUI.fieldSaldo.setText(""+saldo);
         productosGUI.dispose();
+        
         if (saldo < 25) {
             proyecto2GUI.fieldSaldo.setText("00");
             modeloVenta.setSaldo(0);
@@ -94,7 +99,11 @@ public class productosGUIControlador {
             modeloVenta.setCambio(saldo);
             modeloVenta.setEstado(0);
             proyecto2GUI.botonDesicion.setText("Estado: " + 0 );
+            algoritmoMaquina.setValidar(false);
         }
+        
+        if (algoritmoMaquina.isValidar()) proyecto2GUI.botonValidar.setText("Valido");
+        else proyecto2GUI.botonValidar.setText("Invalido");
     }
     
     private void botonCancelar(ActionEvent e){
