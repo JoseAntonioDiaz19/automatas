@@ -32,24 +32,19 @@ public class algoritmoMaquinaDulces {
                     case 0:
                         switch (S) {
                             case "1":
-                                Estado = 1;
-                                setValidar(false);
+                                Estado = 1;                                
                                 break;
                             case "2":
-                                Estado = 2;
-                                setValidar(false);
+                                Estado = 2;                               
                                 break;
                             case "5":
                                 Estado = 5;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 10;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 20;
-                                setValidar(false);
                                 break;
                             default:
                                 Error();
@@ -59,23 +54,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 2;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 3;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 6;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 11;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 21;
-                                setValidar(false);
                                 break;
                             default:
                                 Error();
@@ -85,23 +75,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 3;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 4;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 7;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 12;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 22;
-                                setValidar(false);
                                 break;
                             default:
                                 Error();
@@ -111,23 +96,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 4;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 5;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 8;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 13;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 23;
-                                setValidar(false);
                                 break;
                             default:
                                 Error();
@@ -137,23 +117,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 5;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 6;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 9;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 14;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 24;
-                                setValidar(false);
                                 break;
                             default:
                                 Error();
@@ -163,23 +138,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 6;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 7;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 10;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 15;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
-                                setValidar(true);
                                 break;
                             default:
                                 Error();
@@ -189,23 +159,18 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 7;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 8;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 11;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 16;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
-                                setValidar(true);
                                 break;
                             default:
                                 Error();
@@ -215,19 +180,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 8;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 9;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 12;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 17;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -241,19 +202,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 9;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 10;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 13;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 18;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -267,19 +224,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 10;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 11;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 14;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 19;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -293,19 +246,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 11;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 12;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 15;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 20;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -320,19 +269,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 12;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 13;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 16;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 21;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -347,19 +292,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 13;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 14;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 17;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 22;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -373,19 +314,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 14;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 15;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 18;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 23;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -399,19 +336,15 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 15;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 16;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 19;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 24;
-                                setValidar(false);
                                 break;
                             case "20":
                                 Estado = 25;
@@ -425,15 +358,12 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 16;
-                                setValidar(true);
                                 break;
                             case "2":
                                 Estado = 17;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 20;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 25;
@@ -451,15 +381,12 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 17;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 18;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 21;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 25;
@@ -478,15 +405,12 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 18;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 19;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 22;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 25;
@@ -505,15 +429,12 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 19;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 20;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 23;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 25;
@@ -532,15 +453,12 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 20;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 21;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 24;
-                                setValidar(false);
                                 break;
                             case "10":
                                 Estado = 25;
@@ -559,11 +477,9 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 21;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 22;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 25;
@@ -586,11 +502,9 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 22;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 23;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 25;
@@ -613,11 +527,9 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 23;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 24;
-                                setValidar(false);
                                 break;
                             case "5":
                                 Estado = 25;
@@ -640,7 +552,6 @@ public class algoritmoMaquinaDulces {
                         switch (S) {
                             case "1":
                                 Estado = 24;
-                                setValidar(false);
                                 break;
                             case "2":
                                 Estado = 25;
@@ -727,11 +638,8 @@ public class algoritmoMaquinaDulces {
                 }
                 System.out.println("Estado: " + Estado);
                 System.out.println("Simbolo: " + S);
-
             }
-
         }
-
         return Estado;
     }
 
