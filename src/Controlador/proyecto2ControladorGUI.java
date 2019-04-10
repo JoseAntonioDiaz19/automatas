@@ -96,6 +96,7 @@ public class proyecto2ControladorGUI implements Runnable {
         } else {
             proyecto2GUI.botonValidar.setText("Invalido");
         }
+        System.out.println("Validez = " + algoritmoMaquina.isValidar());
     }
 
     private void botonDosPesos(ActionEvent e) {
@@ -118,6 +119,7 @@ public class proyecto2ControladorGUI implements Runnable {
         } else {
             proyecto2GUI.botonValidar.setText("Invalido");
         }
+        System.out.println("Validez = " + algoritmoMaquina.isValidar());
     }
 
     private void botonCincoPesos(ActionEvent e) {
@@ -185,6 +187,7 @@ public class proyecto2ControladorGUI implements Runnable {
         } else {
             proyecto2GUI.botonValidar.setText("Invalido");
         }
+        System.out.println("Validez = " + algoritmoMaquina.isValidar());
     }
 
     private void botonValidar(ActionEvent e) {

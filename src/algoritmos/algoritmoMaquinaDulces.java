@@ -150,6 +150,7 @@ public class algoritmoMaquinaDulces {
                                 break;
                             case "20":
                                 Estado = 25;
+                                setValidar(true);
                                 break;
                             default:
                                 Error();
@@ -171,6 +172,7 @@ public class algoritmoMaquinaDulces {
                                 break;
                             case "20":
                                 Estado = 25;
+                                setValidar(true);
                                 break;
                             default:
                                 Error();
