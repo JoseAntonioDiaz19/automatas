@@ -226,9 +226,14 @@ public class proyecto2ControladorGUI implements Runnable {
                     System.out.println(saldo);
                 }
                 modeloVenta.setEstado(saldo);
-                modeloVenta.setSaldo(saldo);
-                algoritmoMaquina.setValidar(false);
+           
+                if (saldo < 25) {
+                    algoritmoMaquina.setValidar(false);
+                    proyecto2GUI.botonValidar.setText("Invalido");
+                }
+                
                 proyecto2GUI.botonDesicion.setText("Estado: " + estado);
+                System.out.println("Estado = " + estado);
 
                 try {
                     Thread.sleep(80);
