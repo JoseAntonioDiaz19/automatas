@@ -87,10 +87,13 @@ public class productosGUIControlador {
     }
     private void descontarCompra(){
         int saldo = modeloVenta.getSaldo();
-        saldo = saldo - 25;
-        modeloVenta.setSaldo(saldo);
-        proyecto2GUI.fieldSaldo.setText(""+saldo);
-        productosGUI.dispose();
+        
+        if (saldo >= 25) {
+            saldo = saldo - 25;
+            modeloVenta.setSaldo(saldo);
+            proyecto2GUI.fieldSaldo.setText(""+saldo);
+            productosGUI.dispose();
+        }
         
         if (saldo < 25) {
             proyecto2GUI.fieldSaldo.setText("00");

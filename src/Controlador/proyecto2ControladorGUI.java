@@ -226,6 +226,8 @@ public class proyecto2ControladorGUI implements Runnable {
                     System.out.println(saldo);
                 }
                 modeloVenta.setEstado(saldo);
+                modeloVenta.setSaldo(saldo);
+                algoritmoMaquina.setValidar(false);
                 proyecto2GUI.botonDesicion.setText("Estado: " + estado);
 
                 try {
