@@ -47,8 +47,8 @@ public class proyecto2ControladorGUI implements Runnable {
     }
 
     private void close() {
-        if (JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?",
-                "¿?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
+//        if (JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?",
+//                "¿?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
 
         menuGui = new MenuGUI();
         MenuGUIControlador menuGUIControlador = new MenuGUIControlador(menuGui);
@@ -61,7 +61,6 @@ public class proyecto2ControladorGUI implements Runnable {
         proyecto2GUI.botonCincoPesos.addActionListener(this::botonCincoPesos);
         proyecto2GUI.botonDiezPesos.addActionListener(this::botonDiezPesos);
         proyecto2GUI.botonVeintePesos.addActionListener(this::botonVeintePesos);
-        proyecto2GUI.botonValidar.addActionListener(this::botonValidar);
         proyecto2GUI.botonRetirarSaldo.addActionListener(this::botonRetirarSaldo);
     }
 
@@ -188,10 +187,6 @@ public class proyecto2ControladorGUI implements Runnable {
             proyecto2GUI.botonValidar.setText("Invalido");
         }
         System.out.println("Validez = " + algoritmoMaquina.isValidar());
-    }
-
-    private void botonValidar(ActionEvent e) {
-
     }
 
     private void botonRetirarSaldo(ActionEvent e) {

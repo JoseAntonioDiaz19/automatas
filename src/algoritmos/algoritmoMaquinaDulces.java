@@ -15,22 +15,22 @@ public class algoritmoMaquinaDulces {
     private boolean validar = false;
     String S = " ";
 
-    public int Proceso(int Estado, String S) {
+    public int Proceso(int Estado, String Simbolo) {
 
         this.setEstado(Estado);
-        this.S = S;
+        this.S = Simbolo;
 
-        if (!"Fdc".equals(S) && Estado != -1) {
+        if (!"Fdc".equals(Simbolo) && Estado != -1) {
             //S=LeerSimbolo();
 
-            if (!"Fdc".equals(S)) {
+            if (!"Fdc".equals(Simbolo)) {
 
-                Acum = Acum + Integer.parseInt(S);
+                Acum = Acum + Integer.parseInt(Simbolo);
 
                 switch (Estado) {
 
                     case 0:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 1;                                
                                 break;
@@ -51,7 +51,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 1:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 2;
                                 break;
@@ -72,7 +72,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 2:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 3;
                                 break;
@@ -93,7 +93,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 3:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 4;
                                 break;
@@ -114,7 +114,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 4:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 5;
                                 break;
@@ -135,7 +135,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 5:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 6;
                                 break;
@@ -157,7 +157,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 6:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 7;
                                 break;
@@ -179,7 +179,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 7:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 8;
                                 break;
@@ -201,7 +201,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 8:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 9;
                                 break;
@@ -223,7 +223,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 9:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 10;
                                 break;
@@ -245,7 +245,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 10:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 11;
                                 break;
@@ -268,7 +268,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 11:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 12;
                                 break;
@@ -291,7 +291,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 12:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 13;
                                 break;
@@ -313,7 +313,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 13:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 14;
                                 break;
@@ -335,7 +335,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 14:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 15;
                                 break;
@@ -357,7 +357,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 15:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 16;
                                 break;
@@ -380,7 +380,7 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     case 16:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 17;
                                 break;
@@ -404,7 +404,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 17:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 18;
                                 break;
@@ -428,7 +428,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 18:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 19;
                                 break;
@@ -452,7 +452,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 19:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 20;
                                 break;
@@ -476,7 +476,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 20:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 21;
                                 break;
@@ -501,7 +501,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 21:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 22;
                                 break;
@@ -526,7 +526,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 22:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 23;
                                 break;
@@ -551,7 +551,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 23:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 24;
                                 break;
@@ -578,7 +578,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 24:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 25;
                                 setValidar(true);
@@ -605,7 +605,7 @@ public class algoritmoMaquinaDulces {
                         break;
 
                     case 25:
-                        switch (S) {
+                        switch (Simbolo) {
                             case "1":
                                 Estado = 25;
                                 setValidar(true);
@@ -634,12 +634,12 @@ public class algoritmoMaquinaDulces {
                         }
                         break;
                     default:
-                        S = "Fdc";
+                        Simbolo = "Fdc";
                         Estado = (-1);
 
                 }
                 System.out.println("Estado: " + Estado);
-                System.out.println("Simbolo: " + S);
+                System.out.println("Simbolo: " + Simbolo);
             }
         }
         return Estado;

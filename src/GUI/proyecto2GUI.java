@@ -268,7 +268,7 @@ public class proyecto2GUI extends javax.swing.JFrame {
 
         botonRetirarSaldo.setBackground(new java.awt.Color(153, 0, 51));
         botonRetirarSaldo.setForeground(new java.awt.Color(255, 255, 255));
-        botonRetirarSaldo.setText("Retirar sado");
+        botonRetirarSaldo.setText("Retirar saldo");
         botonRetirarSaldo.setBorder(null);
         botonRetirarSaldo.setBorderPainted(false);
         botonRetirarSaldo.setFocusPainted(false);
